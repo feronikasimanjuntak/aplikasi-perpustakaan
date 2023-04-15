@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "cdf29913-4ecf-4412-85e3-baed25b09511",
+		"name": "Perpustakaan Hosting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1YjRkMjY4NC1iZmFlLTQ0ZDctOTVlOC02ODdkY2VjN2RiYjIiLCJqdGkiOiI4Y2NjYjUwYzEyYjk5ZDFlOGVlNDQzOTBjMzc0ZWVkMTQ3NjVmNjQwZDYwZTRmYWNlMmE4N2MxMzg0ZjM3ZmRkOTM4NmY0ZjJjOGEyMTZkNyIsImlhdCI6IjE2NDY5ODgwNTkuODI5ODQyIiwibmJmIjoiMTY0Njk4ODA1OS44Mjk4NTEiLCJleHAiOiIxNjQ3MDc0NDU5LjYxNTQxNSIsInN1YiI6IjQzYzJiYzczLTk5ZTQtNGEyYS1hN2YyLTc4NzUyMzdkMDgzYiIsInNjb3BlcyI6WyJjcnVkLWFyb21hIl19.rpy0uxE92YZlgGpp0gIIvzwlofn2VpOh0qJeHpIw9AxdvVPGykeXINgVZINKeJ0pK-KFAq15D46__qcLDnUp5K2NmSckme0Aj1K6vARdKCDNRG86_MmBRw0n6SIyxxFiKMU3WzGYncmCleiLz_PXfZbNmSAKtSRSkvyuBoNCWAuKgeVa0xqqlXOCxURpMqRRKLE7n88XZ6pjTPPGC-XTTbcGfNKEjN0FUMbZM1oP5pcGRrNi6NfgE4ORt2EqOYFzuxPmjPUm-XZ4POlgop2jBqHETZTeCcdCWRXVy8zoryUM_RNI73i-S4dKPjLs6cTtUsZ8Z7pVhaZoWq9Nw70yAXei8KLf7xz7BxiKDvzLg2SeaDgEw9ZYMq7iXGAwZNq_UzHhbaKC58cEtSPVxoTH1YxPkHGCid2BxJiISpwMudgzOYjoo5gE9NZwHI0VJVRRW4BcOa4XjgG25HxJVpZWQTXE6VjT3daNCDBa4b8w9ob9Kh5cpyFCgcqZKqX9_1_H6DmzFPd7LMoNHJN3-HAmgnReM1y4s28XGzr3TKJPf9yB5uDjzT-KcwV-eXtny8-oQC2CNSyB8xw1xeDPnK8mg1NK888JzTLIbasKEehAhC_4XH6S2aqNhl86pJD-SGai7u8kun6LCxxazak-cyG7a-y7ivdQPPDhIslyHN4x5Mg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "glaksita@example.org",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.perpustakaan.hvlicious.com/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"api",
+								"perpustakaan",
+								"hvlicious",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "havel",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "havel@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "no_hp",
+									"value": "08988282828",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "jalanan",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.perpustakaan.hvlicious.com/api/auth/register",
+							"protocol": "https",
+							"host": [
+								"api",
+								"perpustakaan",
+								"hvlicious",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnBlcnB1c3Rha2Fhbi5odmxpY2lvdXMuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjQ3MzIyMDA0LCJleHAiOjE2NDczMjU2MDQsIm5iZiI6MTY0NzMyMjAwNCwianRpIjoiUG5oRmVIdEJKTUlwMWdkQyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.CKoPFjg6oKCfoNaAkRa21ZYaPyDsDu_LPXjbJypWVmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.perpustakaan.hvlicious.com/api/auth/logout",
+							"protocol": "https",
+							"host": [
+								"api",
+								"perpustakaan",
+								"hvlicious",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.perpustakaan.hvlicious.com/api/books",
+							"protocol": "https",
+							"host": [
+								"api",
+								"perpustakaan",
+								"hvlicious",
+								"com"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnBlcnB1c3Rha2Fhbi5odmxpY2lvdXMuY29tXC9hcGlcL2F1dGhcL2xvZ291dCIsImlhdCI6MTY0NzMyMjAwNCwiZXhwIjoxNjQ3MzI1NjUxLCJuYmYiOjE2NDczMjIwNTEsImp0aSI6Ik5lVlJUaDN1bk5pQ3JZT1YiLCJzdWIiOjJ9.QugTl2h2xMm2tiCz9DmLIszPH0OY4Nv0iiOdozGH-sU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://api.perpustakaan.hvlicious.com/api/books",
+							"protocol": "https",
+							"host": [
+								"api",
+								"perpustakaan",
+								"hvlicious",
+								"com"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnBlcnB1c3Rha2Fhbi5odmxpY2lvdXMuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjQ3MzI2MDY2LCJleHAiOjE2NDczMjk2NjYsIm5iZiI6MTY0NzMyNjA2NiwianRpIjoibUtTcGVpd3lNUDdyUEhXbiIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k_9vA0IJTwL9q703EdoxqTVdBX5PC58SqWiJCkP9_UA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "judul",
+									"value": "kancil dan buaya",
+									"type": "text"
+								},
+								{
+									"key": "kategori_id",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "pengarang",
+									"value": "tukang ngarang",
+									"type": "text"
+								},
+								{
+									"key": "penerbit",
+									"value": "airlangga",
+									"type": "text"
+								},
+								{
+									"key": "jumlah_halaman",
+									"value": "122",
+									"type": "text"
+								},
+								{
+									"key": "tahun_terbit",
+									"value": "2017",
+									"type": "text"
+								},
+								{
+									"key": "edisi_buku",
+									"value": "bekas",
+									"type": "text"
+								},
+								{
+									"key": "jumlah_buku",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"value": "google.com/",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.perpustakaan.hvlicious.com/api/books/8999",
+							"protocol": "https",
+							"host": [
+								"api",
+								"perpustakaan",
+								"hvlicious",
+								"com"
+							],
+							"path": [
+								"api",
+								"books",
+								"8999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnBlcnB1c3Rha2Fhbi5odmxpY2lvdXMuY29tXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjQ3MzI2MDY2LCJleHAiOjE2NDczMjk2NjYsIm5iZiI6MTY0NzMyNjA2NiwianRpIjoibUtTcGVpd3lNUDdyUEhXbiIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k_9vA0IJTwL9q703EdoxqTVdBX5PC58SqWiJCkP9_UA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.perpustakaan.hvlicious.com/api/books/9991",
+							"protocol": "https",
+							"host": [
+								"api",
+								"perpustakaan",
+								"hvlicious",
+								"com"
+							],
+							"path": [
+								"api",
+								"books",
+								"9991"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjMyOTcwNywiZXhwIjoxNjQ2MzMzMzA3LCJuYmYiOjE2NDYzMjk3MDcsImp0aSI6IktjZTVvN0plN0ROWlg3Q1EiLCJzdWIiOjIxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.aS3yJQyjjR6DkAiLJ-309EK4dtkHFOkiIF-CEpYvrrg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.perpustakaan.hvlicious.com/api/books",
+							"protocol": "https",
+							"host": [
+								"api",
+								"perpustakaan",
+								"hvlicious",
+								"com"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnBlcnB1c3Rha2Fhbi5odmxpY2lvdXMuY29tXC9hcGlcL2F1dGhcL2xvZ291dCIsImlhdCI6MTY0NzMyMjAwNCwiZXhwIjoxNjQ3MzI1NjUxLCJuYmYiOjE2NDczMjIwNTEsImp0aSI6Ik5lVlJUaDN1bk5pQ3JZT1YiLCJzdWIiOjJ9.QugTl2h2xMm2tiCz9DmLIszPH0OY4Nv0iiOdozGH-sU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "foto",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.perpustakaan.hvlicious.com/api/books",
+							"protocol": "https",
+							"host": [
+								"api",
+								"perpustakaan",
+								"hvlicious",
+								"com"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://api.perpustakaan.hvlicious.com/api/books",
+							"protocol": "https",
+							"host": [
+								"api",
+								"perpustakaan",
+								"hvlicious",
+								"com"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.perpustakaan.hvlicious.com/api/books",
+							"protocol": "https",
+							"host": [
+								"api",
+								"perpustakaan",
+								"hvlicious",
+								"com"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
